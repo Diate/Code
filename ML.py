@@ -5,7 +5,6 @@ import numpy as np
 from sklearn.utils import shuffle
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
-
 from keras.models import Model
 from keras.models import Sequential
 from keras.layers import BatchNormalization
@@ -68,7 +67,7 @@ models.add(BatchNormalization())
 models.add(Dense(classes))
 models.add(Activation("softmax"))
 
-#print(models.summary())
+print(models.summary())
 
 aug = ImageDataGenerator(rotation_range=0.18, zoom_range=0.15, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True)
 learning_rate = 0.006
