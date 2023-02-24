@@ -67,7 +67,7 @@ models.add(BatchNormalization())
 models.add(Dense(classes))
 models.add(Activation("softmax"))
 
-print(models.summary())
+#print(models.summary())
 
 aug = ImageDataGenerator(rotation_range=0.18, zoom_range=0.15, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True)
 learning_rate = 0.006
